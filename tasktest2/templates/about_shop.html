@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <h1>Информация по магазину {{ shop.name }}:</h1>
+    <ul>
+        {% for city in cities %}
+            <li> Город: {{ city.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for street in streets %}
+            <li> Улица: {{ street.name }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        <li>
+         Статус: {% if is_open %} Открыт {% else %} Закрыт {% endif %}
+        </li>
+    </ul>
+
+
+    <ul>
+        <li>
+         Код статуса: {{ is_open }}
+        </li>
+    </ul>
+
+
+</body>
+</html>

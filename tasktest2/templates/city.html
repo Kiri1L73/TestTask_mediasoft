@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Города</title>
+</head>
+<body>
+
+    <h1> Список городов: </h1>
+    <ul>
+        {% for city in cities %}
+            <li>
+                <a href="{% url 'street_list' city_id=city.id %}">{{ city.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

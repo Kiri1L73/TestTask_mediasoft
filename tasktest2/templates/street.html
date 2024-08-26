@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <h1>Список улиц в городе {{ city.name }}:</h1>
+    <ul>
+        {% for street in streets %}
+            <li>{{ street.name }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
